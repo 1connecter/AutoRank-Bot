@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
+
 const client = new Discord.Client({intents: [Object.Keys(Discord.GatewayIntentBits)]})
+
 const config = require('./config.json')
 
 client.once('ready', () => {
