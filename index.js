@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 
-const client = new Discord.Client({intents: [Object.Keys(Discord.GatewayIntentBits)]})
+const { GatewayIntentBits } = require('discord.js');
+
+const client = new Discord.Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildPresences] });
 
 const config = require('./config.json')
 
